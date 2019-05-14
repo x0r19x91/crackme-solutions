@@ -1,2 +1,2 @@
 # crackme-solutions
-Crackme Solutions from [crackmes.de](https://crackmes.de)
+Crackme Solutions from [crackmes.one](https://crackmes.one)
