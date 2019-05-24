@@ -17,4 +17,4 @@ ans = []
 for i in s:
     ans.append(m[i][0])
 
-print ''.join(ans)
+print ''.join(ans)  # Pr1me_Numb3r5_4r3_s0_P0w3rFull
