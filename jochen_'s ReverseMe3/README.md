@@ -18,7 +18,7 @@
 
 Firstly it fetches kernel32 base address by zeroing out the offset bits, which is 16 because the loader loads every module at a address which is a multiple of 64K. And the function that calls the entry point is kernel32!BaseThreadInitThunk
 
-So, zeroing out the lower 16 bits of the return address, we get the kernel32 module base. This value is stored in m_hKernel32
+So, zeroing out the lower 16 bits of the return address, we get the kernel32 module base. This value is stored in 0x4015c4
 
 cpuid of 0x40000000 corresponds to the first debug check.
 From https://lwn.net/Articles/301888/ we have
