@@ -1,4 +1,6 @@
-[-- ReverseMe --]
+# ReverseMe3
+
+## MainThread
 
 ```
 0000000000401000 | mov rax,qword ptr ss:[rsp]              |
@@ -97,15 +99,14 @@ debugger never breaks.
 ```
 
 This code is pretty easy to understand except for how to identify the syscalls.
-I opened ntdll in IDA, and quickly wrote a script to extract the syscalls
-    All the syscalls have the form
+I opened ntdll in IDA, and quickly wrote a script to extract the syscalls. All the syscalls have the form
         mov eax, NNN
         ...
         syscall
         ...
 
 Script:
-```
+```py
 import idautils
 
 fn = {}
@@ -132,7 +133,7 @@ for i, j in fn.items():
 
 ------------------------------------------------------------------
 
-[-- Thread #1 --]
+## Thread-1
 
 ```
 00000000004010CE | mov r8,0                                |
